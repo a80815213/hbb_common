@@ -2100,6 +2100,7 @@ impl UserDefaultConfig {
             keys::OPTION_ENABLE_FILE_COPY_PASTE => self.get_string(key, "Y", vec!["", "N"]),
             keys::OPTION_EDGE_SCROLL_EDGE_THICKNESS => self.get_num_string(key, 100, 20, 150),
             keys::OPTION_TRACKPAD_SPEED => self.get_num_string(key, 100, 10, 1000),
+            keys::OPTION_ALLOW_AUTO_UPDATE => self.get_string(key, "Y", vec!["N"]),
             _ => self
                 .get_after(key)
                 .map(|v| v.to_string())
